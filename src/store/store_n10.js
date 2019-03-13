@@ -11,7 +11,7 @@ let rate = 10 //  X transactions/sec.
 let last_count = 0;
 let tx_list = [];
 console.log(`using account: ${account}`);
-let isUnlock = web3.personal.unlockAccount(account, "123");
+let isUnlock = web3.personal.unlockAccount(account, "123", 20000);
 console.log(`is unlock: ${isUnlock}`);
 let start_time = new Date();
 let loop_start_time = start_time;
