@@ -1,5 +1,5 @@
 let Web3 = require("web3");
-let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
 let account = web3.eth.accounts[0];
 const fs = require("fs");
 
@@ -11,6 +11,8 @@ let rate = 10 //  X transactions/sec.
 let last_count = 0;
 let tx_list = [];
 console.log(`using account: ${account}`);
+let isUnlock = web3.personal.unlockAccount(account, "123");
+console.log(`is unlock: ${isUnlock}`);
 let start_time = new Date();
 let loop_start_time = start_time;
 for (let i = 1 ; i<=n ; i++){
