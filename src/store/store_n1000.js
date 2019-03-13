@@ -16,7 +16,7 @@ console.log(`is unlock: ${isUnlock}`);
 let start_time = new Date();
 let loop_start_time = start_time;
 for (let i = 1 ; i<=n ; i++){
-    let tx_id = web3.eth.sendTransaction({from:account, data:"0x00"});
+    let tx_id = web3.eth.sendTransaction({from:account, data:"0x00", value: Math.floor(Math.random()*10000)});
     console.log(`i: ${i}, tx_id: ${tx_id}`);
     //tx_list.push(tx_id);
     if(i - last_count == rate && new Date() - loop_start_time < 1000){
