@@ -2,8 +2,8 @@ let Web3 = require("web3");
 let web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
 
 ///  Config. ////
-let n = 100;
-let rate = 3 //  X transactions/sec.
+let n = 1000;
+let rate = 5 //  X transactions/sec.
 //// ------ ////
 
 let last_count = 0;
