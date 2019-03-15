@@ -4,7 +4,7 @@ let account = web3.eth.accounts[0];
 const fs = require("fs");
 
 ///  Config. ////
-let n = 1;
+let n = 10;
 let rate = 10; //  X transactions/sec.
 //// ------ ////
 
